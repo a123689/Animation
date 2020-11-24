@@ -69,13 +69,15 @@
         
         frame
         
-       <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@drawable/ic_launcher_background"/>
-    <item android:drawable="@drawable/ic_launcher_background"/>
-    <item android:drawable="@drawable/ic_launcher_background"/>
-     </animation-list>
+       
         
         tvImage.setBackgroundResource(R.drawable.frame_list)
         val anim = tvImage.background as AnimationDrawable
         anim.start()
+
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_launcher_background" android:duration="1000"/>
+    <item android:drawable="@drawable/ic_launcher_background" android:duration="1000"/>
+    <item android:drawable="@drawable/ic_launcher_background" android:duration="1000"/>
+</animation-list>
