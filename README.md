@@ -17,6 +17,7 @@
   
   xml
   
+   android:ordering="sequentially"
   objectAnimator android:propertyName="y"
         android:valueFrom="0"
         android:valueTo="500"
@@ -53,4 +54,28 @@
         android:fillAfter="true"
         android:repeatCount="infinite"
         
+        val animation = AnimationUtils.loadAnimation(this,R.anim.alpha)
+        tvImage.startAnimation(animation)
         
+        
+        mutil animation
+        
+        val animation1 =  AnimationUtils.loadAnimation(this,R.anim.translate)
+        val animation2 = AnimationUtils.loadAnimation(this,R.anim.translate)
+        val animationset = AnimationSet(false)
+        animationset.addAnimation(animation1)
+        animationset.addAnimation(animation2)
+        
+        
+        frame
+        
+       <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_launcher_background"/>
+    <item android:drawable="@drawable/ic_launcher_background"/>
+    <item android:drawable="@drawable/ic_launcher_background"/>
+     </animation-list>
+        
+        tvImage.setBackgroundResource(R.drawable.frame_list)
+        val anim = tvImage.background as AnimationDrawable
+        anim.start()
